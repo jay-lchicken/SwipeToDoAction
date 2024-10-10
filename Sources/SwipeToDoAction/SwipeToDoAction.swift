@@ -14,6 +14,12 @@ public struct SwipeToDoAction: View {
     var swipeText: String
     var swipeColor: Color
     var onSwipe: () -> Void
+    public init(isSwiped: Binding<Bool>, onSwipe: @escaping () -> Void, swipeText: String = "Slide to Delete", swipeColor: Color = .red) {
+           self._isSwiped = isSwiped
+        self.onSwipe = onSwipe
+           self.swipeText = swipeText
+           self.swipeColor = swipeColor
+    }
     public var body: some View {
         ZStack {
             // Background
