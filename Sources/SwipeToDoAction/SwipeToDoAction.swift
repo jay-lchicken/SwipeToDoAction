@@ -14,7 +14,7 @@ public struct SwipeToDoAction: View {
     var swipeText: String
     var swipeColor: Color
     var onSwipe: () -> Void
-    public init(isSwiped: Binding<Bool>, onSwipe: @escaping () -> Void, swipeText: String = "Slide to Delete", swipeColor: Color = .red) {
+    public init(isSwiped: Binding<Bool>, onSwipe: @escaping () -> Void, swipeText: String, swipeColor: Color) {
            self._isSwiped = isSwiped
         self.onSwipe = onSwipe
            self.swipeText = swipeText
