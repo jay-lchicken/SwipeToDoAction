@@ -34,7 +34,10 @@ struct ContentView: View {
             isSwiped: $isSwiped,
             swipeText: "Delete",
             swipeColor: .red
-        )
+        ){
+            print("Called When Swiped")
+        }
+}
     }
 }
 
