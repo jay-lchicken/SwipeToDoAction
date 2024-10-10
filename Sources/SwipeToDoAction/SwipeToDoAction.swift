@@ -13,7 +13,7 @@ public struct SwipeToDoAction: View {
     @Binding var isSwiped: Bool
     var swipeText: String
     var swipeColor: Color
-
+    var onSwipe: () -> Void
     public var body: some View {
         ZStack {
             // Background
@@ -54,7 +54,7 @@ public struct SwipeToDoAction: View {
                                 withAnimation {
                                     isSwiped = true
                                     self.offset = 0
-                                    onDelete()
+                                    onSwipe()
                                 }
                             } else {
                                
